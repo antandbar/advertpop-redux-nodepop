@@ -22,7 +22,7 @@ client.interceptors.response.use(
 
 // Se guarda el token en cabecera
 export const setAuthorizationHeader = token =>
-  (client.defaults.headers.common['Authorization'] = `Bearer ${token}`);
+  (client.defaults.headers.common['Authorization'] = `${token}`);
 
 // Se elimina el token de cabecera
 export const removeAuthorizationHeader = () => {

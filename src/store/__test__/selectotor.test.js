@@ -11,7 +11,7 @@ describe('getAdverts', () => {
 describe('getAdvert', () => {
   it('should return a advert', () => {
     const advertId = '1';
-    const adverts = [{ id: advertId }];
+    const adverts = [{ _id: advertId }];
     const state = { adverts: { data: adverts } };
     expect(getAdvert(advertId)(state)).toEqual(adverts[0]);
   });

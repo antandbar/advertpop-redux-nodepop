@@ -1,15 +1,14 @@
 import client from '../../api/client';
 
-const advertsBaseUrl = '/api/v1/adverts';
+const advertsBaseUrl = '/apiv1/ads';
 
 export const getAdverts = () => {
   const url = advertsBaseUrl;
-
   return client.get(url);
 };
 
 export const getTags = () => {
-  const url = `${advertsBaseUrl}/tags`;
+  const url = `${advertsBaseUrl}/tagslist`;
   return client.get(url);
 };
 export const getAdvert = advertId => {

@@ -95,8 +95,8 @@ const AdvertsPage = () => {
             />
             <ul>
               {adverts.map(advert => (
-                <li key={advert.id}>
-                  <Link to={`/adverts/${advert.id}`}>
+                <li key={advert._id}>
+                  <Link to={`/adverts/${advert._id}`}>
                     <Advert {...advert} />
                   </Link>
                 </li>

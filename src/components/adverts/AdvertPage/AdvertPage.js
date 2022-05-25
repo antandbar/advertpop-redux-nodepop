@@ -38,7 +38,7 @@ const AdvertPage = () => {
       <Advert {...advert} isPhoto={true} />
       <div className="advertPage-div-button">
         {!isDelete && (
-          <Button variant="delete" onClick={handleDeleteAdvert}>
+          <Button variant="delete" onClick={handleDeleteAdvert} disabled>
             Eliminar
           </Button>
         )}

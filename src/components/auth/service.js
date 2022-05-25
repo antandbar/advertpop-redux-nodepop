@@ -5,9 +5,9 @@ import client, {
 import storage from '../../utils/storage';
 
 export const login = ({ remember, ...credentials }) => {
-  return client.post('/api/auth/login', credentials).then(({ accessToken }) => {
-    setAuthorizationHeader(accessToken);
-    if (remember === true) storage.set('auth', accessToken);
+  return client.post('/apiv1/login', credentials).then(({ token }) => {
+    setAuthorizationHeader(token);
+    if (remember === true) storage.set('auth', token);
   });
 };
 

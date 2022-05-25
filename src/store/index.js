@@ -39,7 +39,7 @@ const configureStore = (preloadedState, { history }) => {
         history.replace(from);
       },
       [ADVERT_CREATED_SUCCESS]: (history, payload) =>
-        history.push(`/adverts/${payload.id}`), 
+        history.push(`/adverts/${payload._id}`), 
     }),
     timestamp,
   ];

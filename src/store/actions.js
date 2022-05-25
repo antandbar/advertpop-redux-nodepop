@@ -84,7 +84,7 @@ export const advertsLoaded = () => {
     dispatch(advertsLoadedRequest());
     try {
       const adverts = await api.adverts.getAdverts();
-      dispatch(advertsLoadedSuccess(adverts));
+      dispatch(advertsLoadedSuccess(adverts.results));
     } catch (error) {
       dispatch(advertsLoadedFailure(error));
       throw error;
@@ -115,7 +115,7 @@ export const tagsLoaded = () => {
     dispatch(tagsLoadedRequest());
     try {
       const tags = await api.adverts.getTags();
-      dispatch(tagsLoadedSuccess(tags));
+      dispatch(tagsLoadedSuccess(tags.results));
     } catch (error) {
       dispatch(tagsLoadedFailure(error));
       throw error;
@@ -173,7 +173,7 @@ export const advertCreated = (advert) => {
     dispatch(advertCreatedRequest());
     try {
       const createdAdvert = await api.adverts.createAdvert(advert);
-      dispatch(advertCreatedSuccess(createdAdvert));
+      dispatch(advertCreatedSuccess(createdAdvert.result));
     } catch (error) {
       dispatch(advertCreatedFailure(error));
       throw error;
